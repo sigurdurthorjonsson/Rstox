@@ -335,12 +335,12 @@ spatial2matrixList <- function(x, drop=TRUE, data.frame.out=FALSE){
 		###out
 	}
 	
-	#' @importFrom sp disaggregate
+	#' @importFrom terra disagg
 	### # Disaggregate the polygons:
-	### out <- sp::disaggregate(x)
+	### out <- terra::disagg(x)
 	# Extract the coordinates:
 	if("polygons" %in% methods::slotNames(x)){
-		out <- sp::disaggregate(x)
+		out <- as(terra::disagg(terra::vect(x)),"Spatial")
 		out <- lapply(out@polygons, getCoordsMultipolygon, data.frame.out=data.frame.out)
 	}
 	else if("coords" %in% methods::slotNames(x)){
@@ -1700,6 +1700,7 @@ subsetStrata <- function(strata, lonlat){
 }
 #' 
 #' @export
+#' @imoort tidyverse
 #' @import ggplot2
 #' @rdname surveyPlanner
 #' 
