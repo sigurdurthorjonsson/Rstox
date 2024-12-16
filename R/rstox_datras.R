@@ -27,7 +27,7 @@ prepareDATRAS <- function(projectName, fileName=NULL)
 		# We have to remove "."," " and use uppercase
 		shipName <- toupper(gsub("[[:space:][:punct:]]", "", shipName))
 
-		# Replace Å with AA
+		# Replace AA with AA # removed offending non-ASCII in copy of Sea2Data/Rstox
 		shipName <- gsub("\u00C5", "AA", shipName)
 
 		tempShipFile <- tempfile()

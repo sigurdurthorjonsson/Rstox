@@ -776,7 +776,7 @@ diagnostics_model_configuration <- function(stoxexport, okcol = default_color_ok
 
 
 #
-# Diverse plot for å vise prøveheterogenitet og enkle feilsjekker som bør håndteres med datafiltrering, datakorreksjon eller datakonvertering.
+# Diverse plot for aa vise proveheterogenitet og enkle feilsjekker som boer haandteres med datafiltrering, datakorreksjon eller datakonvertering.
 #
 
 default_blankcode="--"

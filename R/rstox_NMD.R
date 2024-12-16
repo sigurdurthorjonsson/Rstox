@@ -1380,7 +1380,7 @@ downloadSerialno <- function(serialno, downloadType, year=NULL, tsn=NULL, prefix
 		return(data.frame(year=year, serialno, tsn, URL=URL, stringsAsFactors=FALSE))
 	}
 	
-	# Create the project with a model incoporating the serian´lno and tsn:
+	# Create the project with a model incoporating the serialno and tsn:
 	model <- getSerialnoTsnModel(serialno, tsn, model)
 	projectName <- createProject(projectPath, dir=dir, model=model, ow=ow, ...)
 
@@ -1820,13 +1820,13 @@ getElements <- function(data, levels=list("element", c("text", ".attrs")), data.
 		# [1] "3183"
     	# 
 		# $row$name
-		# [1] "Torsketrål 135"
+		# [1] "Torsketraal 135"
     	# 
 		# $row$area
 		# [1] "0"
     	# 
 		# $row$description
-		# [1] "Torsketrål 135 mm maskevidde, uten rist."
+		# [1] "Torsketraal 135 mm maskevidde, uten rist."
     	# 
 		# $row$.attrs
 		#                       type                 deprecated                updatedTime                  updatedBy               insertedTime                 insertedBy 
