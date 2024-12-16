@@ -22,6 +22,7 @@
 #' @return \code{polyArea} returns area in nmi squared, and \code{matrix2multipolygon} returns a MULTIPOLYGON wkt.
 #'
 #' @examples
+#' \dontrun{
 #' projectName <- "Test_Rstox"
 #' g <- getBaseline(projectName, input="proc", proc=NULL, drop=FALSE)
 #' # Get the stratum polygons:
@@ -36,6 +37,7 @@
 #' ###plot(NULL, xlim=xlim, ylim=ylim)
 #' ###lapply(xy, lines, col='black', pbg='white')
 #' ###lapply(xy, polyArea, input="xy")
+#' }
 #' 
 #' @export
 #' @importFrom rgeos readWKT
@@ -560,6 +562,7 @@ rapplyKeepDataFrames <- function(x, FUN, ...){
 #' @return \code{polyArea} returns area in nmi squared, and \code{matrix2multipolygon} returns a MULTIPOLYGON wkt.
 #'
 #' @examples
+#' \dontrun{
 #' # Generate parallel transects with equal effort in each stratum (proportional to area):
 #' projectName <- "Test_Rstox"
 #' system.time(Parallel <- surveyPlanner(projectName=projectName, type="Parallel", bearing="N",
@@ -623,6 +626,7 @@ rapplyKeepDataFrames <- function(x, FUN, ...){
 #' # the directory using 'dir', or the filenames using 'filenames'. Also use 'prefix' or 'suffix' 
 #' # to add info to the file names):
 #' writeTransects(Zigzag3, projectName, ext="nc")
+#' }
 #'
 #' @seealso
 #'

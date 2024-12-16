@@ -18,7 +18,7 @@ Description: This package contains most of the functionality of the StoX softwar
 BugReports: https://github.com/Sea2Data/Rstox/issues
 License: LGPL-3
 LazyData: true
-RoxygenNote: 6.1.0
+RoxygenNote: 7.3.1
 Imports:
 		sf, data.table (>= 1.10.4-3),
 		ggplot2,
@@ -27,7 +27,7 @@ Imports:
 		rgeos,
 		rJava,
 		sp,
-		XML, terra
+		XML, terra, MASS, methods
 Suggests: ggmap,
     ncdf4,
     plotrix

@@ -37,6 +37,7 @@
 #' @param relative.path		Logical: If TRUE, update the project.xml file with the relative paths in Read* functions.
 #'
 #' @examples
+#' \dontrun{
 #' # Show templates:
 #' templ <- createProject()
 #' names(templ)
@@ -54,6 +55,7 @@
 #' xmlfiles <- system.file("extdata", "Test_Rstox", package="Rstox", "input")
 #' list.files(xmlfiles, recursive=TRUE)
 #' dat <- readXMLfiles(xmlfiles)
+#' }
 #'
 #' @return A project object
 #' \code{createProject} returns the path to the StoX project directory. \cr \cr
@@ -1066,6 +1068,7 @@ getRelativeStoXPath <- function(x, fsep=.Platform$file.sep){
 #' @return For \code{\link{runBaseline}} theproject name, and for \code{\link{getBaseline}} a list of three elements named "parameters", "outputData", "processData", where empty elements can be dropped.
 #'
 #' @examples
+#' \dontrun{
 #' # Get output from the baseline:
 #' projectName <- "Test_Rstox"
 #' system.time(baselineData <- getBaseline(projectName))
@@ -1086,6 +1089,7 @@ getRelativeStoXPath <- function(x, fsep=.Platform$file.sep){
 #'
 #' # Check differences in parameters and data saved by the baseline model:
 #' all.equal(baselineData, baselineDataMod)
+#' }
 #'
 #' @export
 #' @rdname runBaseline

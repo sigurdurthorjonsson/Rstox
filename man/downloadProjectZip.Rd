@@ -4,8 +4,15 @@
 \alias{downloadProjectZip}
 \title{Download a zipped StoX project to a specified project path.}
 \usage{
-downloadProjectZip(URL, projectName = NULL, projectRoot = NULL,
-  cleanup = TRUE, ow = TRUE, msg = TRUE, onlyone = TRUE)
+downloadProjectZip(
+  URL,
+  projectName = NULL,
+  projectRoot = NULL,
+  cleanup = TRUE,
+  ow = TRUE,
+  msg = TRUE,
+  onlyone = TRUE
+)
 }
 \arguments{
 \item{URL}{The URL of the zipped project.}

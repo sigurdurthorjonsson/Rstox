@@ -228,10 +228,12 @@ distributeAbundance <- function(i=NULL, abnd, seedV=NULL) {
 #' @return Updated list with imputed bootstrap results 
 #'
 #' @examples
+#' \dontrun{
 #' projectName <- "Test_Rstox"
 #' boot <- runBootstrap(projectName, nboot=10, seed=1, bootstrapMethod="AcousticTrawl")
 #' # imputeByAge() fills in empty cells:
 #' system.time(bootstrap_Acoustic_imputed <- imputeByAge(projectName))
+#' }
 #'
 #' @importFrom data.table rbindlist
 #' @importFrom parallel detectCores makeCluster parLapplyLB stopCluster
@@ -479,10 +481,12 @@ getPlottingUnit <- function(unit=NULL, var="Abundance", baseunit=NULL, implement
 #' @return Plot saved to file 
 #'
 #' @examples
+#' \dontrun{
 #' projectName <- "Test_Rstox"
 #' # Run bootstrap before plotting:
 #' boot <- runBootstrap(projectName, nboot=10, seed=1, bootstrapMethod="AcousticTrawl")
 #' plotNASCDistribution(projectName)
+#' }
 #'
 #' @importFrom grDevices dev.off
 #' @export

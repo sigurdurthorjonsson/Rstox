@@ -7,8 +7,14 @@
 \alias{modifyBaselineParameters}
 \title{Set, read, get or modify baseline parameters.}
 \usage{
-setBaselineParameters(projectName, msg = FALSE, parlist = list(),
-  modelType = "all", save = c("last", "java"), ...)
+setBaselineParameters(
+  projectName,
+  msg = FALSE,
+  parlist = list(),
+  modelType = "all",
+  save = c("last", "java"),
+  ...
+)
 
 readBaselineParametersJava(projectName, keepMissing = TRUE)
 

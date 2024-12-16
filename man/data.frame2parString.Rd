@@ -10,8 +10,6 @@ data.frame2parString(x)
 parString2data.frame(string)
 }
 \arguments{
-\item{x}{A data.frame with the parameters as columns, such as data.frame(SpecCat=c("Torsk", "Sild", ""), Alpha=runif(3), Beta=runif(3), LMin=runif(3), LMax=runif(3)).}
-
 \item{x}{Parameter string to convert to data frame, given as <parameter1> = <value>; <parameter2> = <value>; and so on, where lines in the data frame are separated by "/". See examples.}
 }
 \description{

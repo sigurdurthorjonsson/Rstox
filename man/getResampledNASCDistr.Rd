@@ -4,8 +4,13 @@
 \alias{getResampledNASCDistr}
 \title{Resample NASC distribution}
 \usage{
-getResampledNASCDistr(projectName, psuNASC, stratumNASC, parameters,
-  sorted = TRUE)
+getResampledNASCDistr(
+  projectName,
+  psuNASC,
+  stratumNASC,
+  parameters,
+  sorted = TRUE
+)
 }
 \arguments{
 \item{projectName}{The name or full path of the project, a baseline object (as returned from \code{\link{getBaseline}} or \code{\link{runBaseline}}, og a project object (as returned from \code{\link{openProject}}).}
@@ -27,11 +32,13 @@ Matrix of resampled strata NASC means
 Generates resampled NASC distribution.
 }
 \examples{
+\dontrun{
 projectName <- "Test_Rstox"
 psuNASC <- getPSUNASC(projectName)
 stratumNASC <- getNASCDistr(projectName, psuNASC=psuNASC, NASCDistr="normal")
 resampledNASC <- getResampledNASCDistr(projectName, psuNASC=psuNASC, stratumNASC=stratumNASC, 
     parameters=list(seed=1, nboot=5))
+}
 
 }
 \keyword{internal}

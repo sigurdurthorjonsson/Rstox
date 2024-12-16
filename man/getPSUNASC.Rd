@@ -24,8 +24,10 @@ A Java integer, double, or Boolean
 \code{aggPSUNASC} aggregates psuNASC Layer to PELBOT. Used within functions when resampling and rescaling NASC values if Layer!=PELBOT. \cr \cr
 }
 \examples{
+\dontrun{
 psuNASC <- getPSUNASC("Test_Rstox")
 psuNASC_agg <- aggPSUNASC(psuNASC=psuNASC)
+}
 
 }
 \keyword{internal}

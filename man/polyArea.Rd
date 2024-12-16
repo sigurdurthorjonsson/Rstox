@@ -16,23 +16,35 @@ readWKTSplit(x, ...)
 
 polyArea(x, requireClosed = TRUE)
 
-polyArea_test(x, par = list(proj = "laea", units = "kmi", lon_0 = NA,
-  lat_0 = NA, x_0 = 0, y_0 = 0, ellps = "WGS84", datum = "WGS84"),
-  longlat = TRUE, ...)
+polyArea_test(
+  x,
+  par = list(proj = "laea", units = "kmi", lon_0 = NA, lat_0 = NA, x_0 = 0, y_0 = 0,
+    ellps = "WGS84", datum = "WGS84"),
+  longlat = TRUE,
+  ...
+)
 
-geo2xy(x, par = list(proj = "aeqd", units = "kmi", lon_0 = NA, lat_0 =
-  NA, x_0 = 0, y_0 = 0, ellps = "WGS84", datum = "WGS84"), inv = FALSE,
-  data.frame.out = FALSE, ...)
+geo2xy(
+  x,
+  par = list(proj = "aeqd", units = "kmi", lon_0 = NA, lat_0 = NA, x_0 = 0, y_0 = 0,
+    ellps = "WGS84", datum = "WGS84"),
+  inv = FALSE,
+  data.frame.out = FALSE,
+  ...
+)
 
 getMatrixList(x, drop = TRUE, data.frame.out = FALSE)
 
-getMultipolygon(x, drop = TRUE, data.frame.out = FALSE,
-  requireClosed = TRUE)
+getMultipolygon(x, drop = TRUE, data.frame.out = FALSE, requireClosed = TRUE)
 
 getSpatial(x)
 
-matrix2multipolygon(x, drop = TRUE, data.frame.out = FALSE,
-  requireClosed = TRUE)
+matrix2multipolygon(
+  x,
+  drop = TRUE,
+  data.frame.out = FALSE,
+  requireClosed = TRUE
+)
 
 multipolygon2matrix(x, drop = TRUE, data.frame.out = FALSE)
 }
@@ -66,6 +78,7 @@ multipolygon2matrix(x, drop = TRUE, data.frame.out = FALSE)
 \code{multipolygon2matrix} identical to \code{getMatrixList}. \cr \cr
 }
 \examples{
+\dontrun{
 projectName <- "Test_Rstox"
 g <- getBaseline(projectName, input="proc", proc=NULL, drop=FALSE)
 # Get the stratum polygons:
@@ -80,6 +93,7 @@ lapply(g$processData$stratumpolygon$Polygon, polyArea)
 ###plot(NULL, xlim=xlim, ylim=ylim)
 ###lapply(xy, lines, col='black', pbg='white')
 ###lapply(xy, polyArea, input="xy")
+}
 
 }
 \keyword{internal}

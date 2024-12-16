@@ -7,22 +7,50 @@
 \alias{runRScripts}
 \title{Run a StoX baseline model}
 \usage{
-runBaseline(projectName, out = c("project", "baseline",
-  "baseline-report", "name"), startProcess = 1, endProcess = Inf,
-  reset = FALSE, save = FALSE, modelType = "baseline", msg = TRUE,
-  exportCSV = FALSE, warningLevel = 0, tempRScriptFileName = NULL,
-  parlist = list(), ...)
+runBaseline(
+  projectName,
+  out = c("project", "baseline", "baseline-report", "name"),
+  startProcess = 1,
+  endProcess = Inf,
+  reset = FALSE,
+  save = FALSE,
+  modelType = "baseline",
+  msg = TRUE,
+  exportCSV = FALSE,
+  warningLevel = 0,
+  tempRScriptFileName = NULL,
+  parlist = list(),
+  ...
+)
 
-getBaseline(projectName, input = c("par", "proc"), proc = "all",
-  drop = TRUE, startProcess = 1, endProcess = Inf, reset = FALSE,
-  save = FALSE, modelType = "baseline", msg = TRUE,
-  exportCSV = FALSE, warningLevel = 0, parlist = list(),
-  tempRScriptFileName = NULL, close = FALSE, ...)
+getBaseline(
+  projectName,
+  input = c("par", "proc"),
+  proc = "all",
+  drop = TRUE,
+  startProcess = 1,
+  endProcess = Inf,
+  reset = FALSE,
+  save = FALSE,
+  modelType = "baseline",
+  msg = TRUE,
+  exportCSV = FALSE,
+  warningLevel = 0,
+  parlist = list(),
+  tempRScriptFileName = NULL,
+  close = FALSE,
+  ...
+)
 
 generateRScripts(projectName, fresh = TRUE)
 
-runRScripts(projectName, modelType = c("r", "r-report"), fresh = TRUE,
-  msg = TRUE, add.time = FALSE)
+runRScripts(
+  projectName,
+  modelType = c("r", "r-report"),
+  fresh = TRUE,
+  msg = TRUE,
+  add.time = FALSE
+)
 }
 \arguments{
 \item{projectName}{The name or full path of the project, a baseline object (as returned from \code{\link{getBaseline}} or \code{\link{runBaseline}}, og a project object (as returned from \code{\link{openProject}}).}
@@ -78,6 +106,7 @@ For \code{\link{runBaseline}} theproject name, and for \code{\link{getBaseline}}
 The parameters startProcess and endProcess specify the range of processes to run (startProcess : endProcess). If the model has been run already for all or some of the processes in this range, only the unrun processes are run. If there are processes in or prior to this range for which parameters have changed, all processes from the first changed process and throughout the range startProcess : endProcess are rerun. The range of processes to run is extended to any changed processes beyond the range. If reset=TRUE, the range or processes to run is extended to the range startProcess : endProcess regardless of whether the processes have previouslu been run.
 }
 \examples{
+\dontrun{
 # Get output from the baseline:
 projectName <- "Test_Rstox"
 system.time(baselineData <- getBaseline(projectName))
@@ -98,5 +127,6 @@ system.time(baselineDataMod <- getBaseline(projectName,
 
 # Check differences in parameters and data saved by the baseline model:
 all.equal(baselineData, baselineDataMod)
+}
 
 }

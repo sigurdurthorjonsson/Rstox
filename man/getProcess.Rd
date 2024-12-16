@@ -4,8 +4,14 @@
 \alias{getProcess}
 \title{Get process indices.}
 \usage{
-getProcess(projectName, proc = "all", modelType = "baseline",
-  dropNA = TRUE, msg = TRUE, proc.out = FALSE)
+getProcess(
+  projectName,
+  proc = "all",
+  modelType = "baseline",
+  dropNA = TRUE,
+  msg = TRUE,
+  proc.out = FALSE
+)
 }
 \arguments{
 \item{projectName}{The name or full path of the project, a baseline object (as returned from \code{\link{getBaseline}} or \code{\link{runBaseline}}, og a project object (as returned from \code{\link{openProject}}).}

@@ -10,29 +10,57 @@
 \alias{getCentroid}
 \title{Plan an acoustic-trawl survey.}
 \usage{
-surveyPlanner(projectName, parameters = NULL, type = "Parallel",
-  bearing = "N", rev = FALSE, retour = FALSE, toursFirst = FALSE,
-  hours = 240, nmi = NULL, t0 = NULL, knots = 10, seed = 0,
-  angsep = 1/6, distsep = NULL, margin = NULL, equalEffort = FALSE,
-  byStratum = TRUE, strata = "all", cruise = "surveyPlanner",
-  keepTransport = TRUE, centroid = NULL, ...)
+surveyPlanner(
+  projectName,
+  parameters = NULL,
+  type = "Parallel",
+  bearing = "N",
+  rev = FALSE,
+  retour = FALSE,
+  toursFirst = FALSE,
+  hours = 240,
+  nmi = NULL,
+  t0 = NULL,
+  knots = 10,
+  seed = 0,
+  angsep = 1/6,
+  distsep = NULL,
+  margin = NULL,
+  equalEffort = FALSE,
+  byStratum = TRUE,
+  strata = "all",
+  cruise = "surveyPlanner",
+  keepTransport = TRUE,
+  centroid = NULL,
+  ...
+)
 
 addStratum(x, acousticProc = "FilterAcoustic")
 
 subsetStrata(strata, lonlat)
 
-plotStratum(x, plot = c("map", "stratum", "transect"), centroid = NULL,
-  transport_alpha = 0.1, zoom = 1.5, aspectratio = NULL,
-  xlab = "Longitude", ylab = "Latitude", xlim = NULL, ylim = NULL,
-  keep0effort = TRUE, strata = "all", strataNameCol = "darkblue",
-  ...)
+plotStratum(
+  x,
+  plot = c("map", "stratum", "transect"),
+  centroid = NULL,
+  transport_alpha = 0.1,
+  zoom = 1.5,
+  aspectratio = NULL,
+  xlab = "Longitude",
+  ylab = "Latitude",
+  xlim = NULL,
+  ylim = NULL,
+  keep0effort = TRUE,
+  strata = "all",
+  strataNameCol = "darkblue",
+  ...
+)
 
 addStratumBordersAndNames(p, x, strataNameCol = "darkblue")
 
 readStrataPolygons(projectName, ...)
 
-getCentroid(lonlat, proj = "aeqd", lonlatnames = c("longitude",
-  "latitude"))
+getCentroid(lonlat, proj = "aeqd", lonlatnames = c("longitude", "latitude"))
 }
 \arguments{
 \item{projectName}{The name or full path of the project, a baseline object (as returned from \code{\link{getBaseline}} or \code{\link{runBaseline}}, og a project object (as returned from \code{\link{openProject}}). Can also be the path to a shapefile or folder of shape files, or to a file with polygons given as a two column matrix with stratum name in the first column and a MULTIPOLYGON wkt string in the second conlumn.}
@@ -127,6 +155,7 @@ The following types are implemented:
 }
 }
 \examples{
+\dontrun{
 # Generate parallel transects with equal effort in each stratum (proportional to area):
 projectName <- "Test_Rstox"
 system.time(Parallel <- surveyPlanner(projectName=projectName, type="Parallel", bearing="N",
@@ -190,6 +219,7 @@ p <- plotStratum(Zigzag3)
 # the directory using 'dir', or the filenames using 'filenames'. Also use 'prefix' or 'suffix' 
 # to add info to the file names):
 writeTransects(Zigzag3, projectName, ext="nc")
+}
 
 }
 \seealso{
