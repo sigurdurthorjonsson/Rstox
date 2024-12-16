@@ -20,16 +20,14 @@ License: LGPL-3
 LazyData: true
 RoxygenNote: 6.1.0
 Imports:
-		data.table (>= 1.10.4-3),
+		sf, data.table (>= 1.10.4-3),
 		ggplot2,
 		pbapply,
 		rgdal,
 		rgeos,
 		rJava,
 		sp,
-		XML
+		XML, terra
 Suggests: ggmap,
     ncdf4,
-    pgirmess,
-    eca,
     plotrix

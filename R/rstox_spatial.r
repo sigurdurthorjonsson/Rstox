@@ -2241,7 +2241,7 @@ writeTransectsGPX <- function(x, projectName, dir=NULL, digits=5, prefix="", suf
 		
 		out <- data.frame(wp=seq_len(nrow(Transect)), Long=round(Transect$lon_start, digits=digits), Lat=round(Transect$lat_start, digits=digits))
 		# Use the suggested pgirmess package:
-		pgirmess::writeGPX(out, file=filename)
+#		pgirmess::writeGPX(out, file=filename)
 	}
 
 	# Split into strata, and set the files names as names of the list:
