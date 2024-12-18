@@ -1,7 +1,0 @@
-# Rstox version: 1.20 (detatched fork of Sea2Data/Rstox in December 2024)
-
-This version of Rstox is intended for making the continued use of surveyPlanner possible 
-after some changes in the R-package environment making it difficult to run previous versions.
-
-In order to keep the functionality of Rstox::surveyPlanner available on (almost) up-to-date R installation
-a fork of Sea2Data/Rstox was detached the original and some crucial changes made, for details see [here](details.md).
