@@ -1,6 +1,6 @@
 Package: Rstox
 Title: Running Stox functionality independently in R
-Version: 1.11
+Version: 1.20
 Authors@R: c(
   person("Arne Johannes", "Holmin", role = c("aut","cre"), email = "arnejh@imr.no"),
   person("Edvin", "Fuglebakk", role = "ctb"),
@@ -12,9 +12,9 @@ Author: Arne Johannes Holmin [aut, cre],
   Gjert Endre Dingsoer [ctr],
   Aasmund Skaalevik [ctr],
   Espen Johnsen [ctr]
-Maintainer: Arne Johannes Holmin <arnejh@imr.no>
+Maintainer: Sigurdur Thor Jonsson <sigurdur@hafro.is>
 Depends: R (>= 3.5)
-Description: This package contains most of the functionality of the StoX software, which is used for assessment of fish and other marine resources based on biotic and acoustic survey and landings data, among other uses. Rstox is intended for further analyses of such data, facilitating iterations over an arbitrary number of parameter values and data sets.
+Description: This package contains some of the functionality of the StoX software, which is used for assessment of fish and other marine resources based on biotic and acoustic survey and landings data, among other uses. This version of Rstox is intended for making the continued use of surveyPlanner possible, alive after some changes in the R-package environment making it difficult to run previous versions.
 BugReports: https://github.com/Sea2Data/Rstox/issues
 License: LGPL-3
 LazyData: true
